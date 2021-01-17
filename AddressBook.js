@@ -102,4 +102,80 @@ class AddressBook{
             console.log("UPDATED.....")
             return fs.writeFileSync('AddressBook.json', JSON.stringify(value)); 
         }
+        setUsername(fname) {
+            console.log(JSON.stringify(data).includes(fname))
+                for (var i=0; i<data.Person.length; i++) {
+                    if (data.Person[i].FirstName === fname) {
+                        console.log(data.Person[i])
+                        var select = parseInt(readLine.question("Select 1:FirstName 2:LastName 3:Address 4:State: 5: City 6: Zipcode 7: PhoneNumber "))
+                        switch (select){
+                            case 1: data.Person[i].FirstName = this.firstName()
+                                    this.UpDate(data)
+                                break;
+                            case 2: data.Person[i].LastName = this.lastName()
+                                    this.UpDate(data)                               
+                                break;
+                            case 3: data.Person[i].Address = this.address()
+                                    this.UpDate(data)                                
+                                break;
+                            case 4: data.Person[i].State = this.state()
+                                    this.UpDate(data)                           
+                                break;
+                            case 5: data.Person[i].City = this.city()
+                                    this.UpDate(data)
+                                break;
+                            case 6: data.Person[i].ZipCode = this.zipCode()
+                                    this.UpDate(data)
+                                break;
+                            case 7: data.Person[i].PhoneNumber = this.phoneNumber()
+                                    this.UpDate(data)
+                                break;
+                            default:console.log("Didn't select proper one")
+                                break;
+                            }          
+                        return;
+                    }else{
+                        continue;
+                    }
+                }
+        }
+
+    setUserPhoneNo(name) {
+            console.log(JSON.stringify(data).includes(name))
+                for (var i=0; i<data.Person.length; i++) {
+                    if (data.Person[i].PhoneNumber == name) {
+                        console.log(data.Person[i])
+                        var select = parseInt(readLine.question("Select 1:FirstName 2:LastName 3:Address 4:State: 5: City 6: Zipcode 7: PhoneNumber "))
+                        switch (select){
+                            case 1: data.Person[i].FirstName = this.firstName()
+                                    this.UpDate(data)
+                                break;
+                            case 2: data.Person[i].LastName = this.lastName()
+                                    this.UpDate(data)                               
+                                break;
+                            case 3: data.Person[i].Address = this.address()
+                                    this.UpDate(data)                                
+                                break;
+                            case 4: data.Person[i].State = this.state()
+                                    this.UpDate(data)                           
+                                break;
+                            case 5: data.Person[i].City = this.city()
+                                    this.UpDate(data)
+                                break;
+                            case 6: data.Person[i].ZipCode = this.zipCode()
+                                    this.UpDate(data)
+                                break;
+                            case 7: data.Person[i].PhoneNumber = this.phoneNumber()
+                                    this.UpDate(data)
+                                break;
+                            default:console.log("Didn't select proper one")
+                                break;
+                            }          
+                        return;
+                    }else{
+                        continue;
+                    }
+                }
+        }
+
 module.exports = new AddressBook();
