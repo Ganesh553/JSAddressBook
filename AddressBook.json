@@ -1,0 +1,13 @@
+{
+    "Person": [
+        {
+            "FirstName": "Ganesh",
+            "LastName": "kumar",
+            "Address": "Wdfg",
+            "State": "karnataka",
+            "City": "Qdfc",
+            "ZipCode": 127458,
+            "PhoneNumber": 7896541235
+        }
+    ]
+ }
