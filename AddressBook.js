@@ -177,5 +177,15 @@ class AddressBook{
                     }
                 }
         }
-
+        deletePerson=()=>{    
+        this.FirstName = readLine.question("Enter First Name: ");
+        // this.array = data['Person'];
+        let index=data.Person.map(function(item){
+            return item.FirstName
+            }).indexOf(this.FirstName);
+        data['Person'].splice(index,1);
+        this.UpDate(data)
+        // fs.writeFileSync('AddressBook.json', JSON.stringify(data));
+        console.log(data)
+    }
 module.exports = new AddressBook();
