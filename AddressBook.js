@@ -188,5 +188,4 @@ class AddressBook{
         // fs.writeFileSync('AddressBook.json', JSON.stringify(data));
         console.log(data)
     }
-
 module.exports = new AddressBook();
