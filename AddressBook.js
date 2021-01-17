@@ -191,4 +191,49 @@ class AddressBook{
     displayBook(){
         console.log(data);
     }
+    searchByState(searchName){
+        console.log(JSON.stringify(data).includes(searchName))
+        for (var i=0; i<data.Person.length; i++) {
+                if (data.Person[i].State == searchName) {
+                    console.log(data.Person[i].FirstName)             
+                }
+                else{
+                    continue;
+                }
+        }       
+    }
+    searchByCity(searchName){
+        console.log(JSON.stringify(data).includes(searchName))
+        for (var i=0; i<data.Person.length; i++) {
+                if (data.Person[i].City == searchName) {
+                    console.log(data.Person[i].FirstName)             
+                }
+                else{
+                    continue;
+                }
+            }   
+    }
+    searchByAddress(searchName){
+        console.log(JSON.stringify(data).includes(searchName))
+        for (var i=0; i<data.Person.length; i++) {
+                if (data.Person[i].Address == searchName) {
+                    console.log(data.Person[i].FirstName)             
+                }
+                else{
+                    continue;
+                }
+            }
+    }
+    searchByZipCode(searchName){
+        console.log(JSON.stringify(data).includes(searchName))
+        for (var i=0; i<data.Person.length; i++) {
+                if (data.Person[i].ZipCode == searchName) {
+                    console.log(data.Person[i].FirstName)             
+                }
+                else{
+                    continue;
+                }
+                break;
+            }   
+    }
 module.exports = new AddressBook();
